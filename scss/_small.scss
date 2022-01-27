@@ -1,0 +1,250 @@
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
+
+/*----------- apply a natural box layout model to all elements --------------*/
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+
+/*----------- BODY --------------*/
+
+body {
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+/*----------- HEADER --------------*/
+
+div#header {
+    padding: .5rem 2%;
+    color: white;
+    background-image: url(../images/header-small-copy.png);
+    height: 140px;
+}
+
+
+header {
+
+    h1 {
+        margin: 0;
+        padding-top: 2rem;
+        padding-left: 2rem;
+    }
+    
+    h2 {
+        margin: 0;
+        font-weight: normal;
+        padding-left: 2rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    div#nav {background-color: #111;}
+         nav {
+            button {
+                background: transparent;
+                border: none;
+                font-size: 1.5rem;
+                padding: .2rem;
+                color: rgba(255, 255, 255, 0.9);
+            }
+    
+            ul {
+            margin:0;
+            padding: 0;
+            border-bottom: solid 1px rgba(255, 255, 255, 0.1);
+            display: none;
+            }
+
+            ul.open {
+                display: block;
+            }
+    
+            li {
+            list-style-type: none;
+            }
+
+            ul li {
+                border-bottom: solid 1px rgba(255, 255, 255, 0.1);
+            }
+    
+            ul li a {
+            text-align: left;
+            display: block;
+            padding: 1rem 1rem; /*44px min*/
+            color: #eee;
+            text-decoration: none;
+            border-top: solid 1px rgb(63, 63, 63);
+            }
+    
+            ul li a:hover {
+            background-color: #444;
+            }
+    
+            ul li.active a {
+            background-color: #333;
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*----------- MAIN --------------*/
+
+div#main {background-color: black;}
+main {
+    background-color: white;
+    padding: 0 2%;
+    min-height: 10rem;
+
+    h1 {margin: 0;
+        padding-top: 2rem;
+        padding-left: 2rem;
+    }
+
+/*----------- CARDS --------------*/
+
+    $cbr: 10px;
+
+    div.cards {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    div.card {
+        flex-basis: 100%;
+        border:1px solid #999;
+        border-radius: $cbr;
+        margin: 1rem 1%;
+        text-align: center;
+
+    div a {
+        display:block;
+        width: 100%;
+        height: 300px;
+        text-decoration: none;
+        padding: 0 2%;
+        transition: all .5s ease-in;
+    }
+
+    div a:hover {
+        background: none;
+        text-shadow: 0 0 4px green;
+    }
+
+    div:nth-child(1) {
+        background-image:url("../images/1.jpg");
+    }
+
+    div:nth-child(2) {
+        background-image:url("../images/1.jpg");
+    }
+
+    div:nth-child(3) {
+        background-image:url("../images/1.jpg");
+    }
+
+    div:nth-child(1) a {
+        background-color: #3055b4;
+    }
+
+    div:nth-child(2) a {
+        background-color: #3055b4;
+    }
+
+    div:nth-child(3) a {
+        background-color: #3055b4;
+    }
+
+    section {
+        background-color: gray;
+        color: white;
+        padding: 1rem 0%;
+        border-top-left-radius: $cbr - 1;
+        border-top-right-radius: $cbr - 1;
+        } // end of section
+
+        img {
+            padding: 1rem;
+        } //end of img
+
+        p {
+            padding: 1rem 2vw;
+        }
+
+        a {
+            display: block;
+            background-color: black;
+            color: white;
+            padding: 1rem 0%;
+            margin: 1rem 4vw;
+            border-radius: $cbr;
+        }
+
+        a:hover{background-color: lighten(black, 50%);}
+
+    } // end of card
+
+    div.card:hover img {
+        animation: bounce 1s 1;
+    }
+    img {
+        position: relative;
+    }
+
+        @keyframes bounce {
+            0% {bottom: 0px; animation-timing-function: ease-out;}
+            25% {bottom: 60px; animation-timing-function: ease-in;}
+            50% {bottom: 0px; animation-timing-function: ease-out;}
+            75% {bottom: 30px; animation-timing-function: ease-in;}
+            100% {bottom: 0px;}
+
+        }
+}
+
+
+/*----------- FOOTER --------------*/
+
+div#footer {background-color: #ddd;}
+footer {
+    
+    padding: .5rem 2%;
+    text-align: center;
+}
+
+
+
+/*----- Clearfix: Force an Element not to collapse -----*/
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}

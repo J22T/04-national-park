@@ -1,0 +1,70 @@
+/*----------- HEADER --------------*/
+
+div#header {
+    background-image: url(../images/header-Medium-1\ copy.png);
+    height: 240px;
+
+    h1 {
+        padding-top: 7rem;
+    }
+}
+
+
+/*----------- NAVIGATION --------------*/
+
+
+
+
+/*----------- MAIN --------------*/
+
+div#main {background-color: black;}
+main {
+    background-color: white;
+    padding: 0 2%;
+    min-height: 10rem;
+
+    h1 {margin: 0;
+        padding-top: 2rem;}
+
+    $cbr: 10px;
+
+    div.cards {display: flex;}
+
+    div.card {
+        flex-basis: 40%;
+        border:1px solid #999;
+        border-radius: $cbr;
+        margin: 1rem 1rem;
+        text-align: center;
+
+    section {
+        background-color: gray;
+        color: white;
+        padding: 1rem 0;
+        border-top-left-radius: $cbr - 1;
+        border-top-right-radius: $cbr - 1;
+        } // end of section
+
+    } // end of card
+
+    div.card:hover img {
+        animation: bounce 1s 1;
+    }
+    img {
+        position: relative;
+    }
+
+        @keyframes bounce {
+            0% {bottom: 0px; animation-timing-function: ease-out;}
+            25% {bottom: 60px; animation-timing-function: ease-in;}
+            50% {bottom: 0px; animation-timing-function: ease-out;}
+            75% {bottom: 30px; animation-timing-function: ease-in;}
+            100% {bottom: 0px;}
+
+        }
+}
+
+
+
+/*----------- FOOTER --------------*/
+    
